@@ -1,0 +1,54 @@
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurora DApp</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">Aurora</div>
+    <ul>
+      <li><a href="#" id="faucetTab">Water Faucet</a></li>
+      <li><a href="#" id="depositTab">Deposit/Withdraw</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="faucetSection">
+      <h2>Water Faucet</h2>
+      <img src="水龙头.jpg" alt="Faucet Image" class="faucet-image">
+      <input type="text" id="faucetAddress" placeholder="Enter your wallet address">
+      <button id="faucetButton">Claim Tokens</button>
+      <p id="faucetResult">Result will be shown here...</p>
+    </section>
+
+    <section id="depositSection" style="display: none;">
+      <h2>Deposit/Withdraw</h2>
+      <div class="output">
+        <p id="balanceOutput">Balance will be shown here...</p>
+      </div>
+      <div class="actions">
+        <div class="action">
+          <h3>Deposit</h3>
+          <input type="text" id="depositAddress" placeholder="Enter your wallet address">
+          <input type="number" id="depositAmount" placeholder="Enter deposit amount">
+          <button id="depositButton">Confirm Deposit</button>
+        </div>
+        <div class="action">
+          <h3>Withdraw</h3>
+          <input type="text" id="withdrawAddress" placeholder="Enter your wallet address">
+          <input type="number" id="withdrawAmount" placeholder="Enter withdraw amount">
+          <button id="withdrawButton">Confirm Withdraw</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/ethers/dist/ethers.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
